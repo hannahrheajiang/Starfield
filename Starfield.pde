@@ -64,7 +64,7 @@ class OddballParticle extends Particle
   }
   void show() {
     fill(particleColor);
-    circle(xPos,yPos,(int)(Math.random()*25));
+    int randSize = (int)(Math.random()*25);
+    ellipse(xPos,yPos,randSize,randSize);
   }
 }
-
