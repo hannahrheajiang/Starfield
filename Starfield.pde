@@ -11,7 +11,6 @@ void setup()
     starArray[i] = new OddballParticle(500,350);
   }
 }
-
 void draw()
 {
   background(0);
@@ -20,7 +19,6 @@ void draw()
     starArray[i].move();
   }
 }
-
 void mousePressed(){
   background(0);
   for (int i = 0; i < starArray.length; i+=1){
@@ -28,9 +26,8 @@ void mousePressed(){
   }
   for (int i = 0; i < starArray.length-250; i+=1){
     starArray[i] = new OddballParticle(mouseX,mouseY);
-  }
 }
-
+}
 class Particle
 {
   float xPos, yPos;
@@ -42,7 +39,7 @@ class Particle
     starAngle = Math.random()*2*Math.PI;
     starSpeed = Math.random()*10;
     particleColor = color((int)(Math.random()*256),(int)(Math.random()*256), (int)(Math.random()*256));
-  }
+    }
     
   void move() {
     xPos += Math.cos(starAngle)*starSpeed;
@@ -70,5 +67,4 @@ class OddballParticle extends Particle
     circle(xPos,yPos,(int)(Math.random()*25));
   }
 }
-
 
